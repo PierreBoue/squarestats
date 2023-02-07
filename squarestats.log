@@ -1,0 +1,1083 @@
+2023-02-07T12:13:27.508+01:00  INFO 28774 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 28774 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T12:13:27.509+01:00  INFO 28774 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T12:13:27.805+01:00  INFO 28774 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T12:13:27.817+01:00  INFO 28774 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2023-02-07T12:13:28.100+01:00  INFO 28774 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T12:13:28.107+01:00  INFO 28774 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T12:13:28.107+01:00  INFO 28774 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T12:13:28.151+01:00  INFO 28774 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T12:13:28.151+01:00  INFO 28774 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 617 ms
+2023-02-07T12:13:28.459+01:00  INFO 28774 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T12:13:28.635+01:00  INFO 28774 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e807e2
+2023-02-07T12:13:28.636+01:00  INFO 28774 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T12:13:28.644+01:00 ERROR 28774 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-02-07T12:13:28.644+01:00  WARN 28774 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-02-07T12:13:28.644+01:00  INFO 28774 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T12:13:28.647+01:00  INFO 28774 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T12:13:28.648+01:00  INFO 28774 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-07T12:13:28.655+01:00  INFO 28774 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-02-07T12:13:28.666+01:00 ERROR 28774 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.2.jar:3.0.2]
+	at com.macaplix.squarestats.SquarestatsApplication.main(SquarestatsApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:267) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747) ~[spring-beans-6.0.4.jar:6.0.4]
+	... 16 common frames omitted
+Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [org.hibernate.dialect.mysql] as strategy [org.hibernate.dialect.Dialect]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:155) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:237) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:190) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect(DialectFactoryImpl.java:96) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:59) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:244) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 31 common frames omitted
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [org.hibernate.dialect.mysql]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:123) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:151) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : org.hibernate.dialect.mysql
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[na:na]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:120) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 40 common frames omitted
+
+2023-02-07T12:14:22.606+01:00  INFO 28867 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 28867 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T12:14:22.608+01:00  INFO 28867 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T12:14:22.905+01:00  INFO 28867 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T12:14:22.919+01:00  INFO 28867 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2023-02-07T12:14:23.179+01:00  INFO 28867 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T12:14:23.184+01:00  INFO 28867 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T12:14:23.185+01:00  INFO 28867 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T12:14:23.227+01:00  INFO 28867 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T12:14:23.227+01:00  INFO 28867 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 591 ms
+2023-02-07T12:14:23.493+01:00  INFO 28867 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T12:14:23.657+01:00  INFO 28867 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c16528d
+2023-02-07T12:14:23.659+01:00  INFO 28867 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T12:14:23.666+01:00 ERROR 28867 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-02-07T12:14:23.666+01:00  WARN 28867 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-02-07T12:14:23.666+01:00  INFO 28867 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T12:14:23.669+01:00  INFO 28867 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T12:14:23.670+01:00  INFO 28867 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-07T12:14:23.678+01:00  INFO 28867 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-02-07T12:14:23.686+01:00 ERROR 28867 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.2.jar:3.0.2]
+	at com.macaplix.squarestats.SquarestatsApplication.main(SquarestatsApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:267) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747) ~[spring-beans-6.0.4.jar:6.0.4]
+	... 16 common frames omitted
+Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [org.hibernate.dialect.mysql] as strategy [org.hibernate.dialect.Dialect]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:155) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:237) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:190) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect(DialectFactoryImpl.java:96) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:59) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:244) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 31 common frames omitted
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [org.hibernate.dialect.mysql]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:123) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:151) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : org.hibernate.dialect.mysql
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[na:na]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:120) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 40 common frames omitted
+
+2023-02-07T13:01:33.276+01:00  INFO 29641 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 29641 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T13:01:33.277+01:00  INFO 29641 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T13:01:33.589+01:00  INFO 29641 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T13:01:33.602+01:00  INFO 29641 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2023-02-07T13:01:33.891+01:00  INFO 29641 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T13:01:33.896+01:00  INFO 29641 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T13:01:33.897+01:00  INFO 29641 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T13:01:33.953+01:00  INFO 29641 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T13:01:33.953+01:00  INFO 29641 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 646 ms
+2023-02-07T13:01:34.251+01:00  INFO 29641 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T13:01:34.463+01:00  INFO 29641 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b44318
+2023-02-07T13:01:34.464+01:00  INFO 29641 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T13:01:34.472+01:00 ERROR 29641 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-02-07T13:01:34.472+01:00  WARN 29641 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-02-07T13:01:34.472+01:00  INFO 29641 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T13:01:34.475+01:00  INFO 29641 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T13:01:34.477+01:00  INFO 29641 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-07T13:01:34.485+01:00  INFO 29641 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-02-07T13:01:34.493+01:00 ERROR 29641 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.2.jar:3.0.2]
+	at com.macaplix.squarestats.SquarestatsApplication.main(SquarestatsApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:267) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747) ~[spring-beans-6.0.4.jar:6.0.4]
+	... 16 common frames omitted
+Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [org.hibernate.dialect.mysql] as strategy [org.hibernate.dialect.Dialect]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:155) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:237) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:190) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect(DialectFactoryImpl.java:96) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:59) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:244) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 31 common frames omitted
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [org.hibernate.dialect.mysql]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:123) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:151) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : org.hibernate.dialect.mysql
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[na:na]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:120) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 40 common frames omitted
+
+2023-02-07T13:06:47.535+01:00  INFO 30022 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 30022 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T13:06:47.537+01:00  INFO 30022 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T13:06:47.831+01:00  INFO 30022 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T13:06:47.842+01:00  INFO 30022 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2023-02-07T13:06:48.105+01:00  INFO 30022 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T13:06:48.110+01:00  INFO 30022 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T13:06:48.111+01:00  INFO 30022 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T13:06:48.155+01:00  INFO 30022 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T13:06:48.156+01:00  INFO 30022 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 591 ms
+2023-02-07T13:06:48.421+01:00  INFO 30022 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T13:06:48.593+01:00  INFO 30022 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@643ecfef
+2023-02-07T13:06:48.594+01:00  INFO 30022 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T13:06:48.636+01:00  INFO 30022 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-07T13:06:48.815+01:00  INFO 30022 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T13:06:48.840+01:00  WARN 30022 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-07T13:06:48.920+01:00 DEBUG 30022 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-07T13:06:48.964+01:00 DEBUG 30022 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2023-02-07T13:06:48.975+01:00 DEBUG 30022 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-07T13:06:48.980+01:00 DEBUG 30022 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-07T13:06:49.057+01:00  INFO 30022 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-02-07T13:06:49.063+01:00  INFO 30022 --- [main] c.m.squarestats.SquarestatsApplication   : Started SquarestatsApplication in 1.812 seconds (process running for 2.135)
+2023-02-07T13:07:47.677+01:00  INFO 30022 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T13:07:47.679+01:00  INFO 30022 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T13:07:47.693+01:00  INFO 30022 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T13:07:49.479+01:00  INFO 30201 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 30201 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T13:07:49.480+01:00  INFO 30201 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T13:07:49.801+01:00  INFO 30201 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T13:07:49.813+01:00  INFO 30201 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2023-02-07T13:07:50.104+01:00  INFO 30201 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T13:07:50.110+01:00  INFO 30201 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T13:07:50.110+01:00  INFO 30201 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T13:07:50.171+01:00  INFO 30201 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T13:07:50.171+01:00  INFO 30201 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 666 ms
+2023-02-07T13:07:50.465+01:00  INFO 30201 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T13:07:50.673+01:00  INFO 30201 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@203b953c
+2023-02-07T13:07:50.675+01:00  INFO 30201 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T13:07:50.710+01:00  INFO 30201 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-07T13:07:50.877+01:00  INFO 30201 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T13:07:50.906+01:00  WARN 30201 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-07T13:07:50.977+01:00 DEBUG 30201 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-07T13:07:51.022+01:00 DEBUG 30201 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2023-02-07T13:07:51.033+01:00 DEBUG 30201 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-07T13:07:51.037+01:00 DEBUG 30201 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-07T13:07:51.114+01:00  INFO 30201 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-02-07T13:07:51.119+01:00  INFO 30201 --- [main] c.m.squarestats.SquarestatsApplication   : Started SquarestatsApplication in 1.893 seconds (process running for 2.271)
+2023-02-07T13:09:54.962+01:00  INFO 30201 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-07T13:09:54.962+01:00  INFO 30201 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-07T13:09:54.963+01:00 DEBUG 30201 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-02-07T13:09:54.963+01:00 DEBUG 30201 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-02-07T13:09:54.963+01:00 DEBUG 30201 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-02-07T13:09:54.963+01:00 DEBUG 30201 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6cc90398
+2023-02-07T13:09:54.963+01:00 DEBUG 30201 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@22361e23
+2023-02-07T13:09:54.964+01:00 DEBUG 30201 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-07T13:09:54.964+01:00  INFO 30201 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-02-07T13:09:54.969+01:00 DEBUG 30201 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/test", parameters={}
+2023-02-07T13:09:54.982+01:00 DEBUG 30201 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#testMethod()
+2023-02-07T13:09:55.020+01:00 DEBUG 30201 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-07T13:09:55.021+01:00 DEBUG 30201 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Connection rest ok"]
+2023-02-07T13:09:55.026+01:00 DEBUG 30201 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T13:48:44.446+01:00  INFO 30201 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T13:48:44.448+01:00  INFO 30201 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T13:48:44.458+01:00  INFO 30201 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T15:05:54.213+01:00  INFO 33772 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 33772 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T15:05:54.215+01:00  INFO 33772 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T15:05:54.533+01:00  INFO 33772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T15:05:54.573+01:00  INFO 33772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
+2023-02-07T15:05:54.862+01:00  INFO 33772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T15:05:54.877+01:00  INFO 33772 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T15:05:54.877+01:00  INFO 33772 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T15:05:54.927+01:00  INFO 33772 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T15:05:54.927+01:00  INFO 33772 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 678 ms
+2023-02-07T15:05:55.230+01:00  INFO 33772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T15:05:55.482+01:00  INFO 33772 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ad0bb4e
+2023-02-07T15:05:55.483+01:00  INFO 33772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T15:05:55.556+01:00  INFO 33772 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-07T15:05:55.636+01:00  WARN 33772 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: 'java.lang.reflect.Type org.hibernate.annotations.common.reflection.ReflectionManager.toType(org.hibernate.annotations.common.reflection.XClass)'
+2023-02-07T15:05:55.636+01:00  INFO 33772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T15:05:55.643+01:00  INFO 33772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T15:05:55.644+01:00  INFO 33772 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-07T15:05:55.652+01:00  INFO 33772 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-02-07T15:05:55.663+01:00 ERROR 33772 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.hibernate.cfg.annotations.BasicValueBinder.resolveJavaType(BasicValueBinder.java:1002)
+
+The following method did not exist:
+
+    'java.lang.reflect.Type org.hibernate.annotations.common.reflection.ReflectionManager.toType(org.hibernate.annotations.common.reflection.XClass)'
+
+The calling method's class, org.hibernate.cfg.annotations.BasicValueBinder, was loaded from the following location:
+
+    jar:file:/home/pierre/.m2/repository/org/hibernate/orm/hibernate-core/6.1.6.Final/hibernate-core-6.1.6.Final.jar!/org/hibernate/cfg/annotations/BasicValueBinder.class
+
+The called method's class, org.hibernate.annotations.common.reflection.ReflectionManager, is available from the following locations:
+
+    jar:file:/home/pierre/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar!/org/hibernate/annotations/common/reflection/ReflectionManager.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.hibernate.annotations.common.reflection.ReflectionManager: file:/home/pierre/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.hibernate.cfg.annotations.BasicValueBinder and org.hibernate.annotations.common.reflection.ReflectionManager
+
+2023-02-07T15:09:33.903+01:00  INFO 33933 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 33933 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T15:09:33.904+01:00  INFO 33933 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T15:09:34.210+01:00  INFO 33933 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T15:09:34.248+01:00  INFO 33933 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2023-02-07T15:09:34.504+01:00  INFO 33933 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T15:09:34.510+01:00  INFO 33933 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T15:09:34.510+01:00  INFO 33933 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T15:09:34.567+01:00  INFO 33933 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T15:09:34.567+01:00  INFO 33933 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 639 ms
+2023-02-07T15:09:34.825+01:00  INFO 33933 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T15:09:35.002+01:00  INFO 33933 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b9697ae
+2023-02-07T15:09:35.003+01:00  INFO 33933 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T15:09:35.010+01:00 ERROR 33933 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-02-07T15:09:35.011+01:00  WARN 33933 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-02-07T15:09:35.011+01:00  INFO 33933 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T15:09:35.013+01:00  INFO 33933 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T15:09:35.015+01:00  INFO 33933 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-07T15:09:35.022+01:00  INFO 33933 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-02-07T15:09:35.031+01:00 ERROR 33933 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.2.jar:3.0.2]
+	at com.macaplix.squarestats.SquarestatsApplication.main(SquarestatsApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:267) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747) ~[spring-beans-6.0.4.jar:6.0.4]
+	... 16 common frames omitted
+Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [org.hibernate.dialect.mysql] as strategy [org.hibernate.dialect.Dialect]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:155) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:237) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:190) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect(DialectFactoryImpl.java:96) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:59) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:244) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 31 common frames omitted
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [org.hibernate.dialect.mysql]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:123) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:151) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : org.hibernate.dialect.mysql
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[na:na]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:120) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 40 common frames omitted
+
+2023-02-07T15:12:37.189+01:00  INFO 34075 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 34075 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T15:12:37.191+01:00  INFO 34075 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T15:12:37.500+01:00  INFO 34075 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T15:12:37.537+01:00  INFO 34075 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
+2023-02-07T15:12:37.795+01:00  INFO 34075 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T15:12:37.800+01:00  INFO 34075 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T15:12:37.801+01:00  INFO 34075 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T15:12:37.858+01:00  INFO 34075 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T15:12:37.858+01:00  INFO 34075 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 641 ms
+2023-02-07T15:12:38.110+01:00  INFO 34075 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T15:12:38.283+01:00  INFO 34075 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ad0bb4e
+2023-02-07T15:12:38.285+01:00  INFO 34075 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T15:12:38.292+01:00 ERROR 34075 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-02-07T15:12:38.292+01:00  WARN 34075 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-02-07T15:12:38.292+01:00  INFO 34075 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T15:12:38.295+01:00  INFO 34075 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T15:12:38.296+01:00  INFO 34075 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-07T15:12:38.303+01:00  INFO 34075 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-02-07T15:12:38.312+01:00 ERROR 34075 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.2.jar:3.0.2]
+	at com.macaplix.squarestats.SquarestatsApplication.main(SquarestatsApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:267) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797) ~[spring-beans-6.0.4.jar:6.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747) ~[spring-beans-6.0.4.jar:6.0.4]
+	... 16 common frames omitted
+Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [org.hibernate.dialect.mysql] as strategy [org.hibernate.dialect.Dialect]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:155) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:237) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:190) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect(DialectFactoryImpl.java:96) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:59) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:244) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 31 common frames omitted
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [org.hibernate.dialect.mysql]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:123) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:151) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : org.hibernate.dialect.mysql
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[na:na]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:120) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	... 40 common frames omitted
+
+2023-02-07T15:22:52.404+01:00  INFO 34361 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 34361 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T15:22:52.406+01:00  INFO 34361 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T15:22:52.707+01:00  INFO 34361 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T15:22:52.745+01:00  INFO 34361 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2023-02-07T15:22:53.007+01:00  INFO 34361 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T15:22:53.013+01:00  INFO 34361 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T15:22:53.013+01:00  INFO 34361 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T15:22:53.070+01:00  INFO 34361 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T15:22:53.071+01:00  INFO 34361 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 640 ms
+2023-02-07T15:22:53.324+01:00  INFO 34361 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T15:22:53.502+01:00  INFO 34361 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8f39224
+2023-02-07T15:22:53.504+01:00  INFO 34361 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T15:22:53.545+01:00  INFO 34361 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-07T15:22:53.625+01:00  WARN 34361 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: 'java.lang.reflect.Type org.hibernate.annotations.common.reflection.ReflectionManager.toType(org.hibernate.annotations.common.reflection.XClass)'
+2023-02-07T15:22:53.626+01:00  INFO 34361 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T15:22:53.634+01:00  INFO 34361 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T15:22:53.636+01:00  INFO 34361 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-07T15:22:53.642+01:00  INFO 34361 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-02-07T15:22:53.652+01:00 ERROR 34361 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.hibernate.cfg.annotations.BasicValueBinder.resolveJavaType(BasicValueBinder.java:1002)
+
+The following method did not exist:
+
+    'java.lang.reflect.Type org.hibernate.annotations.common.reflection.ReflectionManager.toType(org.hibernate.annotations.common.reflection.XClass)'
+
+The calling method's class, org.hibernate.cfg.annotations.BasicValueBinder, was loaded from the following location:
+
+    jar:file:/home/pierre/.m2/repository/org/hibernate/orm/hibernate-core/6.1.6.Final/hibernate-core-6.1.6.Final.jar!/org/hibernate/cfg/annotations/BasicValueBinder.class
+
+The called method's class, org.hibernate.annotations.common.reflection.ReflectionManager, is available from the following locations:
+
+    jar:file:/home/pierre/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar!/org/hibernate/annotations/common/reflection/ReflectionManager.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.hibernate.annotations.common.reflection.ReflectionManager: file:/home/pierre/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.hibernate.cfg.annotations.BasicValueBinder and org.hibernate.annotations.common.reflection.ReflectionManager
+
+2023-02-07T15:29:05.852+01:00  INFO 34697 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 34697 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T15:29:05.854+01:00  INFO 34697 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T15:29:06.217+01:00  INFO 34697 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T15:29:06.267+01:00  INFO 34697 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interfaces.
+2023-02-07T15:29:06.577+01:00  INFO 34697 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T15:29:06.584+01:00  INFO 34697 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T15:29:06.584+01:00  INFO 34697 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T15:29:06.650+01:00  INFO 34697 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T15:29:06.650+01:00  INFO 34697 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 766 ms
+2023-02-07T15:29:06.983+01:00  INFO 34697 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T15:29:07.207+01:00  INFO 34697 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@762bf32d
+2023-02-07T15:29:07.209+01:00  INFO 34697 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T15:29:07.258+01:00  INFO 34697 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-07T15:29:07.338+01:00  WARN 34697 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: 'java.lang.reflect.Type org.hibernate.annotations.common.reflection.ReflectionManager.toType(org.hibernate.annotations.common.reflection.XClass)'
+2023-02-07T15:29:07.338+01:00  INFO 34697 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T15:29:07.342+01:00  INFO 34697 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T15:29:07.345+01:00  INFO 34697 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-07T15:29:07.355+01:00  INFO 34697 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-02-07T15:29:07.372+01:00 ERROR 34697 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.hibernate.cfg.annotations.BasicValueBinder.resolveJavaType(BasicValueBinder.java:1002)
+
+The following method did not exist:
+
+    'java.lang.reflect.Type org.hibernate.annotations.common.reflection.ReflectionManager.toType(org.hibernate.annotations.common.reflection.XClass)'
+
+The calling method's class, org.hibernate.cfg.annotations.BasicValueBinder, was loaded from the following location:
+
+    jar:file:/home/pierre/.m2/repository/org/hibernate/orm/hibernate-core/6.1.6.Final/hibernate-core-6.1.6.Final.jar!/org/hibernate/cfg/annotations/BasicValueBinder.class
+
+The called method's class, org.hibernate.annotations.common.reflection.ReflectionManager, is available from the following locations:
+
+    jar:file:/home/pierre/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar!/org/hibernate/annotations/common/reflection/ReflectionManager.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.hibernate.annotations.common.reflection.ReflectionManager: file:/home/pierre/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.hibernate.cfg.annotations.BasicValueBinder and org.hibernate.annotations.common.reflection.ReflectionManager
+
+2023-02-07T15:30:25.643+01:00  INFO 34859 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 34859 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T15:30:25.645+01:00  INFO 34859 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T15:30:25.980+01:00  INFO 34859 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T15:30:26.022+01:00  INFO 34859 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interfaces.
+2023-02-07T15:30:26.347+01:00  INFO 34859 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T15:30:26.354+01:00  INFO 34859 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T15:30:26.354+01:00  INFO 34859 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T15:30:26.404+01:00  INFO 34859 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T15:30:26.405+01:00  INFO 34859 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 736 ms
+2023-02-07T15:30:26.718+01:00  INFO 34859 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T15:30:26.945+01:00  INFO 34859 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26ca12a2
+2023-02-07T15:30:26.947+01:00  INFO 34859 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T15:30:26.989+01:00  INFO 34859 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-07T15:30:27.860+01:00  INFO 34859 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T15:30:28.064+01:00  WARN 34859 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-07T15:30:28.137+01:00 DEBUG 34859 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-07T15:30:28.190+01:00 DEBUG 34859 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2023-02-07T15:30:28.202+01:00 DEBUG 34859 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-07T15:30:28.208+01:00 DEBUG 34859 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-07T15:30:28.296+01:00  INFO 34859 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-02-07T15:30:28.303+01:00  INFO 34859 --- [main] c.m.squarestats.SquarestatsApplication   : Started SquarestatsApplication in 2.936 seconds (process running for 3.455)
+2023-02-07T15:30:43.045+01:00  INFO 34859 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-07T15:30:43.046+01:00  INFO 34859 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-07T15:30:43.047+01:00 DEBUG 34859 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-02-07T15:30:43.047+01:00 DEBUG 34859 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-02-07T15:30:43.047+01:00 DEBUG 34859 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-02-07T15:30:43.047+01:00 DEBUG 34859 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3f838072
+2023-02-07T15:30:43.047+01:00 DEBUG 34859 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@297454f7
+2023-02-07T15:30:43.048+01:00 DEBUG 34859 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-07T15:30:43.048+01:00  INFO 34859 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-02-07T15:30:43.055+01:00 DEBUG 34859 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/stats/1?score=1", parameters={masked}
+2023-02-07T15:30:43.065+01:00 DEBUG 34859 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#addStat(int, int)
+2023-02-07T15:30:43.203+01:00 DEBUG 34859 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-02-07T15:30:43.207+01:00 DEBUG 34859 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [StatsDTO[playerID=1, score=1, recordDate=Tue Feb 07 15:30:43 CET 2023]]
+2023-02-07T15:30:43.221+01:00 DEBUG 34859 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T15:31:17.414+01:00 DEBUG 34859 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/stats/1?score=-1", parameters={masked}
+2023-02-07T15:31:17.416+01:00 DEBUG 34859 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#addStat(int, int)
+2023-02-07T15:31:17.454+01:00 DEBUG 34859 --- [http-nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-02-07T15:31:17.455+01:00 DEBUG 34859 --- [http-nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [StatsDTO[playerID=1, score=-1, recordDate=Tue Feb 07 15:31:17 CET 2023]]
+2023-02-07T15:31:17.456+01:00 DEBUG 34859 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T15:31:24.915+01:00 DEBUG 34859 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/stats/1?score=1", parameters={masked}
+2023-02-07T15:31:24.916+01:00 DEBUG 34859 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#addStat(int, int)
+2023-02-07T15:31:24.934+01:00 DEBUG 34859 --- [http-nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-02-07T15:31:24.934+01:00 DEBUG 34859 --- [http-nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [StatsDTO[playerID=1, score=1, recordDate=Tue Feb 07 15:31:24 CET 2023]]
+2023-02-07T15:31:24.935+01:00 DEBUG 34859 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T15:32:11.015+01:00  INFO 34859 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T15:32:11.017+01:00  INFO 34859 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T15:32:11.034+01:00  INFO 34859 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T15:34:49.886+01:00  INFO 35080 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 35080 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T15:34:49.888+01:00  INFO 35080 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T15:34:50.203+01:00  INFO 35080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T15:34:50.247+01:00  INFO 35080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interfaces.
+2023-02-07T15:34:50.524+01:00  INFO 35080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T15:34:50.530+01:00  INFO 35080 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T15:34:50.530+01:00  INFO 35080 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T15:34:50.589+01:00  INFO 35080 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T15:34:50.590+01:00  INFO 35080 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 677 ms
+2023-02-07T15:34:50.890+01:00  INFO 35080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T15:34:51.088+01:00  INFO 35080 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10e56da9
+2023-02-07T15:34:51.089+01:00  INFO 35080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T15:34:51.136+01:00  INFO 35080 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-07T15:34:51.582+01:00  INFO 35080 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T15:34:51.756+01:00  WARN 35080 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-07T15:34:51.816+01:00 DEBUG 35080 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-07T15:34:51.887+01:00 DEBUG 35080 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2023-02-07T15:34:51.900+01:00 DEBUG 35080 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-07T15:34:51.907+01:00 DEBUG 35080 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-07T15:34:51.971+01:00  INFO 35080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-02-07T15:34:51.976+01:00  INFO 35080 --- [main] c.m.squarestats.SquarestatsApplication   : Started SquarestatsApplication in 2.375 seconds (process running for 2.77)
+2023-02-07T15:35:47.007+01:00  INFO 35080 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-07T15:35:47.009+01:00  INFO 35080 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-07T15:35:47.009+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-02-07T15:35:47.009+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-02-07T15:35:47.009+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-02-07T15:35:47.009+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7fcfe065
+2023-02-07T15:35:47.010+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@16120270
+2023-02-07T15:35:47.010+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-07T15:35:47.010+01:00  INFO 35080 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-07T15:35:47.023+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/stats/1", parameters={}
+2023-02-07T15:35:47.032+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T15:35:47.045+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in private java.util.ArrayList<com.macaplix.squarestats.dto.StatsDTO> com.macaplix.squarestats.controllers.SquarestatsController.readSatsFromPlayer(int): Optional int parameter 'playerID' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2023-02-07T15:35:47.047+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Failed to complete request: java.lang.IllegalStateException: Optional int parameter 'playerID' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2023-02-07T15:35:47.047+01:00 ERROR 35080 --- [http-nio-8082-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalStateException: Optional int parameter 'playerID' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.] with root cause
+
+java.lang.IllegalStateException: Optional int parameter 'playerID' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleNullValue(AbstractNamedValueMethodArgumentResolver.java:263) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-02-07T15:35:47.054+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2023-02-07T15:35:47.055+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-02-07T15:35:47.071+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-02-07T15:35:47.072+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 07 15:35:47 CET 2023, status=500, error=Internal Server Error, path=/stats/1}]
+2023-02-07T15:35:47.095+01:00 DEBUG 35080 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2023-02-07T15:36:54.032+01:00  INFO 35080 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T15:36:54.035+01:00  INFO 35080 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T15:36:54.046+01:00  INFO 35080 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T15:36:56.487+01:00  INFO 35247 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 35247 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T15:36:56.488+01:00  INFO 35247 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T15:36:56.812+01:00  INFO 35247 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T15:36:56.857+01:00  INFO 35247 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interfaces.
+2023-02-07T15:36:57.162+01:00  INFO 35247 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T15:36:57.167+01:00  INFO 35247 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T15:36:57.168+01:00  INFO 35247 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T15:36:57.218+01:00  INFO 35247 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T15:36:57.218+01:00  INFO 35247 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 704 ms
+2023-02-07T15:36:57.520+01:00  INFO 35247 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T15:36:57.730+01:00  INFO 35247 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3407aa4f
+2023-02-07T15:36:57.732+01:00  INFO 35247 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T15:36:57.771+01:00  INFO 35247 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-07T15:36:58.211+01:00  INFO 35247 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T15:36:58.381+01:00  WARN 35247 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-07T15:36:58.449+01:00 DEBUG 35247 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-07T15:36:58.491+01:00 DEBUG 35247 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2023-02-07T15:36:58.503+01:00 DEBUG 35247 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-07T15:36:58.509+01:00 DEBUG 35247 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-07T15:36:58.571+01:00  INFO 35247 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-02-07T15:36:58.575+01:00  INFO 35247 --- [main] c.m.squarestats.SquarestatsApplication   : Started SquarestatsApplication in 2.363 seconds (process running for 2.716)
+2023-02-07T15:37:03.696+01:00  INFO 35247 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-07T15:37:03.697+01:00  INFO 35247 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-07T15:37:03.697+01:00 DEBUG 35247 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-02-07T15:37:03.697+01:00 DEBUG 35247 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-02-07T15:37:03.697+01:00 DEBUG 35247 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-02-07T15:37:03.697+01:00 DEBUG 35247 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@59d29065
+2023-02-07T15:37:03.698+01:00 DEBUG 35247 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3fda8dae
+2023-02-07T15:37:03.698+01:00 DEBUG 35247 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-07T15:37:03.698+01:00  INFO 35247 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-07T15:37:03.702+01:00 DEBUG 35247 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/stats/1", parameters={}
+2023-02-07T15:37:03.711+01:00 DEBUG 35247 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T15:37:03.799+01:00 DEBUG 35247 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-02-07T15:37:03.802+01:00 DEBUG 35247 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T15:37:03.833+01:00 DEBUG 35247 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T15:37:31.576+01:00  INFO 35247 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T15:37:31.579+01:00  INFO 35247 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T15:37:31.590+01:00  INFO 35247 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T16:21:01.959+01:00  INFO 36470 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 36470 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T16:21:01.961+01:00  INFO 36470 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T16:21:02.291+01:00  INFO 36470 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T16:21:02.333+01:00  INFO 36470 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interfaces.
+2023-02-07T16:21:02.636+01:00  INFO 36470 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T16:21:02.642+01:00  INFO 36470 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T16:21:02.642+01:00  INFO 36470 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T16:21:02.700+01:00  INFO 36470 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T16:21:02.701+01:00  INFO 36470 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 714 ms
+2023-02-07T16:21:02.999+01:00  INFO 36470 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T16:21:03.217+01:00  INFO 36470 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10e56da9
+2023-02-07T16:21:03.218+01:00  INFO 36470 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T16:21:03.257+01:00  INFO 36470 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-07T16:21:03.698+01:00  INFO 36470 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T16:21:03.867+01:00  WARN 36470 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-07T16:21:03.930+01:00 DEBUG 36470 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-07T16:21:03.975+01:00 DEBUG 36470 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2023-02-07T16:21:03.987+01:00 DEBUG 36470 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-07T16:21:03.993+01:00 DEBUG 36470 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-07T16:21:04.057+01:00  INFO 36470 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-02-07T16:21:04.062+01:00  INFO 36470 --- [main] c.m.squarestats.SquarestatsApplication   : Started SquarestatsApplication in 2.384 seconds (process running for 2.787)
+2023-02-07T16:24:08.012+01:00  INFO 36470 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-07T16:24:08.013+01:00  INFO 36470 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-07T16:24:08.013+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-02-07T16:24:08.013+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-02-07T16:24:08.013+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-02-07T16:24:08.014+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7fcfe065
+2023-02-07T16:24:08.014+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@16120270
+2023-02-07T16:24:08.015+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-07T16:24:08.015+01:00  INFO 36470 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-02-07T16:24:08.021+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=2", parameters={masked}
+2023-02-07T16:24:08.029+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.133+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.136+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:24:08.168+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.175+01:00 DEBUG 36470 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=1", parameters={masked}
+2023-02-07T16:24:08.175+01:00 DEBUG 36470 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.178+01:00 DEBUG 36470 --- [http-nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.178+01:00 DEBUG 36470 --- [http-nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:24:08.179+01:00 DEBUG 36470 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.182+01:00 DEBUG 36470 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=1", parameters={masked}
+2023-02-07T16:24:08.182+01:00 DEBUG 36470 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.185+01:00 DEBUG 36470 --- [http-nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.186+01:00 DEBUG 36470 --- [http-nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:24:08.186+01:00 DEBUG 36470 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.188+01:00 DEBUG 36470 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=0", parameters={masked}
+2023-02-07T16:24:08.189+01:00 DEBUG 36470 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.192+01:00 DEBUG 36470 --- [http-nio-8082-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.192+01:00 DEBUG 36470 --- [http-nio-8082-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:24:08.193+01:00 DEBUG 36470 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.196+01:00 DEBUG 36470 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=1", parameters={masked}
+2023-02-07T16:24:08.196+01:00 DEBUG 36470 --- [http-nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.199+01:00 DEBUG 36470 --- [http-nio-8082-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.199+01:00 DEBUG 36470 --- [http-nio-8082-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:24:08.200+01:00 DEBUG 36470 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.202+01:00 DEBUG 36470 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=0", parameters={masked}
+2023-02-07T16:24:08.203+01:00 DEBUG 36470 --- [http-nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.206+01:00 DEBUG 36470 --- [http-nio-8082-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.206+01:00 DEBUG 36470 --- [http-nio-8082-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:24:08.207+01:00 DEBUG 36470 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.209+01:00 DEBUG 36470 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=-1", parameters={masked}
+2023-02-07T16:24:08.210+01:00 DEBUG 36470 --- [http-nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.213+01:00 DEBUG 36470 --- [http-nio-8082-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.213+01:00 DEBUG 36470 --- [http-nio-8082-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:24:08.214+01:00 DEBUG 36470 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.217+01:00 DEBUG 36470 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=0", parameters={masked}
+2023-02-07T16:24:08.217+01:00 DEBUG 36470 --- [http-nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.220+01:00 DEBUG 36470 --- [http-nio-8082-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.220+01:00 DEBUG 36470 --- [http-nio-8082-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:24:08.221+01:00 DEBUG 36470 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.224+01:00 DEBUG 36470 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=1", parameters={masked}
+2023-02-07T16:24:08.224+01:00 DEBUG 36470 --- [http-nio-8082-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.228+01:00 DEBUG 36470 --- [http-nio-8082-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.228+01:00 DEBUG 36470 --- [http-nio-8082-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:24:08.229+01:00 DEBUG 36470 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.232+01:00 DEBUG 36470 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=1", parameters={masked}
+2023-02-07T16:24:08.233+01:00 DEBUG 36470 --- [http-nio-8082-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.237+01:00 DEBUG 36470 --- [http-nio-8082-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.237+01:00 DEBUG 36470 --- [http-nio-8082-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:24:08.238+01:00 DEBUG 36470 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.240+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=1", parameters={masked}
+2023-02-07T16:24:08.241+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.244+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.244+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:24:08.244+01:00 DEBUG 36470 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.247+01:00 DEBUG 36470 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=0", parameters={masked}
+2023-02-07T16:24:08.248+01:00 DEBUG 36470 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.251+01:00 DEBUG 36470 --- [http-nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.251+01:00 DEBUG 36470 --- [http-nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:24:08.251+01:00 DEBUG 36470 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.253+01:00 DEBUG 36470 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=0", parameters={masked}
+2023-02-07T16:24:08.254+01:00 DEBUG 36470 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.257+01:00 DEBUG 36470 --- [http-nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.257+01:00 DEBUG 36470 --- [http-nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:24:08.257+01:00 DEBUG 36470 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.260+01:00 DEBUG 36470 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=0", parameters={masked}
+2023-02-07T16:24:08.260+01:00 DEBUG 36470 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.264+01:00 DEBUG 36470 --- [http-nio-8082-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.265+01:00 DEBUG 36470 --- [http-nio-8082-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:24:08.265+01:00 DEBUG 36470 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.268+01:00 DEBUG 36470 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=2", parameters={masked}
+2023-02-07T16:24:08.268+01:00 DEBUG 36470 --- [http-nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.271+01:00 DEBUG 36470 --- [http-nio-8082-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.271+01:00 DEBUG 36470 --- [http-nio-8082-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:24:08.271+01:00 DEBUG 36470 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.274+01:00 DEBUG 36470 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=1", parameters={masked}
+2023-02-07T16:24:08.274+01:00 DEBUG 36470 --- [http-nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.277+01:00 DEBUG 36470 --- [http-nio-8082-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.277+01:00 DEBUG 36470 --- [http-nio-8082-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:24:08.278+01:00 DEBUG 36470 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.281+01:00 DEBUG 36470 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=1", parameters={masked}
+2023-02-07T16:24:08.281+01:00 DEBUG 36470 --- [http-nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.284+01:00 DEBUG 36470 --- [http-nio-8082-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.285+01:00 DEBUG 36470 --- [http-nio-8082-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:24:08.285+01:00 DEBUG 36470 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.287+01:00 DEBUG 36470 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=0", parameters={masked}
+2023-02-07T16:24:08.288+01:00 DEBUG 36470 --- [http-nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.290+01:00 DEBUG 36470 --- [http-nio-8082-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.290+01:00 DEBUG 36470 --- [http-nio-8082-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:24:08.291+01:00 DEBUG 36470 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.293+01:00 DEBUG 36470 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=-1", parameters={masked}
+2023-02-07T16:24:08.293+01:00 DEBUG 36470 --- [http-nio-8082-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.296+01:00 DEBUG 36470 --- [http-nio-8082-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.297+01:00 DEBUG 36470 --- [http-nio-8082-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:24:08.297+01:00 DEBUG 36470 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:24:08.299+01:00 DEBUG 36470 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=2", parameters={masked}
+2023-02-07T16:24:08.300+01:00 DEBUG 36470 --- [http-nio-8082-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:24:08.303+01:00 DEBUG 36470 --- [http-nio-8082-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:24:08.303+01:00 DEBUG 36470 --- [http-nio-8082-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:24:08.303+01:00 DEBUG 36470 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:43:43.789+01:00  INFO 36470 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T16:43:43.791+01:00  INFO 36470 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T16:43:43.801+01:00  INFO 36470 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-07T16:43:46.339+01:00  INFO 37111 --- [main] c.m.squarestats.SquarestatsApplication   : Starting SquarestatsApplication using Java 19.0.2 with PID 37111 (/home/pierre/Documents/classeur/squarestats/target/classes started by pierre in /home/pierre/Documents/classeur/squarestats)
+2023-02-07T16:43:46.340+01:00  INFO 37111 --- [main] c.m.squarestats.SquarestatsApplication   : The following 1 profile is active: "mysql"
+2023-02-07T16:43:46.669+01:00  INFO 37111 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-07T16:43:46.709+01:00  INFO 37111 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
+2023-02-07T16:43:46.988+01:00  INFO 37111 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-07T16:43:46.993+01:00  INFO 37111 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07T16:43:46.994+01:00  INFO 37111 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-07T16:43:47.053+01:00  INFO 37111 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07T16:43:47.054+01:00  INFO 37111 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 683 ms
+2023-02-07T16:43:47.356+01:00  INFO 37111 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-07T16:43:47.573+01:00  INFO 37111 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74500e4f
+2023-02-07T16:43:47.574+01:00  INFO 37111 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-07T16:43:47.613+01:00  INFO 37111 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-07T16:43:48.052+01:00  INFO 37111 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T16:43:48.227+01:00  WARN 37111 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-07T16:43:48.286+01:00 DEBUG 37111 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-07T16:43:48.331+01:00 DEBUG 37111 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2023-02-07T16:43:48.342+01:00 DEBUG 37111 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-07T16:43:48.348+01:00 DEBUG 37111 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-07T16:43:48.407+01:00  INFO 37111 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-02-07T16:43:48.412+01:00  INFO 37111 --- [main] c.m.squarestats.SquarestatsApplication   : Started SquarestatsApplication in 2.358 seconds (process running for 2.854)
+2023-02-07T16:45:41.499+01:00  INFO 37111 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-07T16:45:41.499+01:00  INFO 37111 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-07T16:45:41.500+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-02-07T16:45:41.500+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-02-07T16:45:41.500+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-02-07T16:45:41.505+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@15a0f9
+2023-02-07T16:45:41.506+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5357de0e
+2023-02-07T16:45:41.507+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-07T16:45:41.508+01:00  INFO 37111 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-02-07T16:45:41.513+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=0", parameters={masked}
+2023-02-07T16:45:41.521+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:45:41.684+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:45:41.687+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:45:41.715+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:45:41.718+01:00 DEBUG 37111 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=1", parameters={masked}
+2023-02-07T16:45:41.719+01:00 DEBUG 37111 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:45:41.823+01:00 DEBUG 37111 --- [http-nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:45:41.824+01:00 DEBUG 37111 --- [http-nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:45:41.824+01:00 DEBUG 37111 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:45:41.826+01:00 DEBUG 37111 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=0", parameters={masked}
+2023-02-07T16:45:41.827+01:00 DEBUG 37111 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:45:41.989+01:00 DEBUG 37111 --- [http-nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:45:41.989+01:00 DEBUG 37111 --- [http-nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:45:41.990+01:00 DEBUG 37111 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:45:41.992+01:00 DEBUG 37111 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=0", parameters={masked}
+2023-02-07T16:45:41.992+01:00 DEBUG 37111 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:45:42.363+01:00 DEBUG 37111 --- [http-nio-8082-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:45:42.363+01:00 DEBUG 37111 --- [http-nio-8082-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:45:42.364+01:00 DEBUG 37111 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:45:42.366+01:00 DEBUG 37111 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=2", parameters={masked}
+2023-02-07T16:45:42.367+01:00 DEBUG 37111 --- [http-nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:45:43.028+01:00 DEBUG 37111 --- [http-nio-8082-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:45:43.029+01:00 DEBUG 37111 --- [http-nio-8082-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:45:43.030+01:00 DEBUG 37111 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:45:43.032+01:00 DEBUG 37111 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=1", parameters={masked}
+2023-02-07T16:45:43.032+01:00 DEBUG 37111 --- [http-nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:45:44.339+01:00 DEBUG 37111 --- [http-nio-8082-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:45:44.339+01:00 DEBUG 37111 --- [http-nio-8082-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:45:44.341+01:00 DEBUG 37111 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:45:44.343+01:00 DEBUG 37111 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=2", parameters={masked}
+2023-02-07T16:45:44.343+01:00 DEBUG 37111 --- [http-nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:45:46.953+01:00 DEBUG 37111 --- [http-nio-8082-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:45:46.954+01:00 DEBUG 37111 --- [http-nio-8082-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:45:46.955+01:00 DEBUG 37111 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:45:46.957+01:00 DEBUG 37111 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=0", parameters={masked}
+2023-02-07T16:45:46.958+01:00 DEBUG 37111 --- [http-nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:45:52.248+01:00 DEBUG 37111 --- [http-nio-8082-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:45:52.249+01:00 DEBUG 37111 --- [http-nio-8082-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:45:52.251+01:00 DEBUG 37111 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:45:52.253+01:00 DEBUG 37111 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=2", parameters={masked}
+2023-02-07T16:45:52.253+01:00 DEBUG 37111 --- [http-nio-8082-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:46:03.075+01:00 DEBUG 37111 --- [http-nio-8082-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:46:03.075+01:00 DEBUG 37111 --- [http-nio-8082-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:46:03.077+01:00 DEBUG 37111 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:46:03.079+01:00 DEBUG 37111 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/stats/1?score=-1", parameters={masked}
+2023-02-07T16:46:03.080+01:00 DEBUG 37111 --- [http-nio-8082-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:46:26.021+01:00 DEBUG 37111 --- [http-nio-8082-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:46:26.022+01:00 DEBUG 37111 --- [http-nio-8082-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO[playerID=1, score=1, recordDate=2023-02-07 15:30:43.08], StatsDTO[playerID=1, score=-1, re (truncated)...]
+2023-02-07T16:46:26.025+01:00 DEBUG 37111 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:46:26.028+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=0", parameters={masked}
+2023-02-07T16:46:26.029+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:46:26.032+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:46:26.032+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:46:26.032+01:00 DEBUG 37111 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:46:26.035+01:00 DEBUG 37111 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=0", parameters={masked}
+2023-02-07T16:46:26.036+01:00 DEBUG 37111 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:46:26.039+01:00 DEBUG 37111 --- [http-nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:46:26.039+01:00 DEBUG 37111 --- [http-nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:46:26.040+01:00 DEBUG 37111 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:46:26.042+01:00 DEBUG 37111 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=-1", parameters={masked}
+2023-02-07T16:46:26.043+01:00 DEBUG 37111 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:46:26.045+01:00 DEBUG 37111 --- [http-nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:46:26.046+01:00 DEBUG 37111 --- [http-nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:46:26.046+01:00 DEBUG 37111 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:46:26.049+01:00 DEBUG 37111 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=1", parameters={masked}
+2023-02-07T16:46:26.049+01:00 DEBUG 37111 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:46:26.052+01:00 DEBUG 37111 --- [http-nio-8082-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:46:26.052+01:00 DEBUG 37111 --- [http-nio-8082-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:46:26.052+01:00 DEBUG 37111 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:46:26.055+01:00 DEBUG 37111 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=0", parameters={masked}
+2023-02-07T16:46:26.055+01:00 DEBUG 37111 --- [http-nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:46:26.058+01:00 DEBUG 37111 --- [http-nio-8082-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:46:26.058+01:00 DEBUG 37111 --- [http-nio-8082-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:46:26.059+01:00 DEBUG 37111 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:46:26.061+01:00 DEBUG 37111 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=1", parameters={masked}
+2023-02-07T16:46:26.061+01:00 DEBUG 37111 --- [http-nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:46:26.064+01:00 DEBUG 37111 --- [http-nio-8082-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:46:26.065+01:00 DEBUG 37111 --- [http-nio-8082-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:46:26.065+01:00 DEBUG 37111 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:46:26.068+01:00 DEBUG 37111 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=1", parameters={masked}
+2023-02-07T16:46:26.068+01:00 DEBUG 37111 --- [http-nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:46:26.071+01:00 DEBUG 37111 --- [http-nio-8082-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:46:26.071+01:00 DEBUG 37111 --- [http-nio-8082-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:46:26.072+01:00 DEBUG 37111 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:46:26.075+01:00 DEBUG 37111 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=-1", parameters={masked}
+2023-02-07T16:46:26.075+01:00 DEBUG 37111 --- [http-nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:46:26.077+01:00 DEBUG 37111 --- [http-nio-8082-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:46:26.078+01:00 DEBUG 37111 --- [http-nio-8082-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:46:26.078+01:00 DEBUG 37111 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:46:26.082+01:00 DEBUG 37111 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=-1", parameters={masked}
+2023-02-07T16:46:26.082+01:00 DEBUG 37111 --- [http-nio-8082-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:46:26.085+01:00 DEBUG 37111 --- [http-nio-8082-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:46:26.085+01:00 DEBUG 37111 --- [http-nio-8082-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:46:26.085+01:00 DEBUG 37111 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:46:26.089+01:00 DEBUG 37111 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/stats/2?score=2", parameters={masked}
+2023-02-07T16:46:26.089+01:00 DEBUG 37111 --- [http-nio-8082-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.macaplix.squarestats.controllers.SquarestatsController#readSatsFromPlayer(int)
+2023-02-07T16:46:26.092+01:00 DEBUG 37111 --- [http-nio-8082-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [text/plain, application/json, application/*+json, */*] and supported [application/json, application/*+json]
+2023-02-07T16:46:26.092+01:00 DEBUG 37111 --- [http-nio-8082-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-02-07T16:46:26.093+01:00 DEBUG 37111 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-02-07T16:47:49.280+01:00  INFO 37111 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-07T16:47:49.281+01:00  INFO 37111 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-07T16:47:49.288+01:00  INFO 37111 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
